@@ -1,9 +1,9 @@
 import {useState} from "react";
 import "./Headermain.css";
-import {VscGrabber, VscClose} from "react-icons/vsc";
 import {Link} from "react-router-dom";
 import {logotext, socialprofils} from "../content_option.js";
 import Themetoggle from "../components/themetoggle/Themetoggle.jsx";
+import {CloseLarge, Menu} from '@carbon/icons-react';
 
 const Headermain = () => {
     const [isActive, setActive] = useState("false");
@@ -22,19 +22,19 @@ const Headermain = () => {
                     </Link>
                     <div className="d-flex align-items-center">
                         <Themetoggle/>
-                        <button className="menu__button  nav_ac" onClick={handleToggle}>
-                            {!isActive ? <VscClose/> : <VscGrabber/>}
+                        <button className="nav_ac" onClick={handleToggle}>
+                            {!isActive ? <CloseLarge size="24"/> : <Menu size="24"/>}
                         </button>
-
                     </div>
                 </div>
 
                 <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
                     <div className="bg__menu h-100">
                         <div className="menu__wrapper">
+
                             <div className="menu__container p-3">
                                 <ul className="the_menu">
-                                    <li className="menu_item ">
+                                    <li className="menu_item">
                                         <Link onClick={handleToggle} to="/" className="my-3">Home</Link>
                                     </li>
                                     <li className="menu_item">
@@ -49,24 +49,21 @@ const Headermain = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
-                        <div className="d-flex">
-                            <a href={socialprofils.github}>GitHub</a>
-                            <a href={socialprofils.instagram}>Instagram</a>
-                            <a href={socialprofils.linkedin}>LinkedIn</a>
-                            <a href={socialprofils.youtube}>YouTube</a>
+
+                        <div
+                            className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
+                            <div className="d-flex">
+                                <a href={socialprofils.github}>GitHub</a>
+                                <a href={socialprofils.instagram}>Instagram</a>
+                                <a href={socialprofils.linkedin}>LinkedIn</a>
+                                <a href={socialprofils.youtube}>YouTube</a>
+                            </div>
+                            <p className="copyright m-0">ⓒ 2025. {logotext} All rights reserved.</p>
                         </div>
-                        <p className="copyright m-0">ⓒ 2025. {logotext} All rights reserved.</p>
+
                     </div>
                 </div>
             </header>
-            <div className="br-top"></div>
-            <div className="br-bottom"></div>
-            <div className="br-left"></div>
-            <div className="br-right"></div>
-
         </>
     );
 };

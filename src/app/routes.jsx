@@ -1,13 +1,14 @@
-import { Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import withRouter from "../hooks/withRouter"
-import { Home } from "../pages/Home/Home.jsx";
-import { Portfolio } from "../pages/Portfolio/Portfolio.jsx";
-import { ContactUs } from "../pages/Contact/Contact.jsx";
-import { About } from "../pages/About/About.jsx";
-import { SocialIcons } from "../components/SocialIcons/SocialIcons.jsx";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import {Home} from "../pages/Home/Home.jsx";
+import {Portfolio} from "../pages/Portfolio/Portfolio.jsx";
+import {ContactUs} from "../pages/Contact/Contact.jsx";
+import {About} from "../pages/About/About.jsx";
+import {SocialIcons} from "../components/SocialIcons/SocialIcons.jsx";
+import {CSSTransition, TransitionGroup} from "react-transition-group";
+import ProjectDetail from "../pages/Portfolio/ProjectDetail.jsx";
 
-const AnimatedRoutes = withRouter(({ location }) => (
+const AnimatedRoutes = withRouter(({location}) => (
     <TransitionGroup>
         <CSSTransition
             key={location.key}
@@ -19,11 +20,13 @@ const AnimatedRoutes = withRouter(({ location }) => (
             unmountOnExit
         >
             <Routes location={location}>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<ContactUs />} />
-                <Route path="*" element={<Home />} />
+                <Route exact path="/" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/portfolio" element={<Portfolio/>}/>
+                <Route path="/contact" element={<ContactUs/>}/>
+                <Route path="/portfolio" element={<Portfolio/>}/>
+                <Route path="/portfolio/:projectId" element={<ProjectDetail/>}/>
+                <Route path="*" element={<Home/>}/>
             </Routes>
         </CSSTransition>
     </TransitionGroup>
@@ -32,8 +35,8 @@ const AnimatedRoutes = withRouter(({ location }) => (
 function AppRoutes() {
     return (
         <div className="s_c">
-            <AnimatedRoutes />
-            <SocialIcons />
+            <AnimatedRoutes/>
+            <SocialIcons/>
         </div>
     );
 }

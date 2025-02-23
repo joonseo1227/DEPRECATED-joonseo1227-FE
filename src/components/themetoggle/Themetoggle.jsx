@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
-import {WiMoonAltWaningCrescent4} from "react-icons/wi";
-
+import {Asleep, Sun} from '@carbon/icons-react';
 
 const Themetoggle = () => {
     const [theme, settheme] = useState(localStorage.getItem("theme"));
@@ -13,7 +12,7 @@ const Themetoggle = () => {
     }, [theme]);
     return (
         <div className="nav_ac" onClick={themetoggle}>
-            <WiMoonAltWaningCrescent4/>
+            {theme === "dark" ? <Asleep size="24"/> : <Sun size="24"/>}
         </div>
     );
 };

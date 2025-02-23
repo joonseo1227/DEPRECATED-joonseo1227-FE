@@ -1,16 +1,16 @@
 import "./SocialIcons.css";
 
 import {
-    FaGithub,
-    FaTwitter,
+    FaCircle,
     FaFacebookF,
-    FaLinkedin,
-    FaYoutube,
-    FaTwitch,
+    FaGithub,
     FaInstagram,
+    FaLinkedin,
     FaSnapchatGhost,
     FaTiktok,
-    FaCircle
+    FaTwitch,
+    FaTwitter,
+    FaYoutube
 } from "react-icons/fa";
 import {socialprofils} from "../../content_option";
 

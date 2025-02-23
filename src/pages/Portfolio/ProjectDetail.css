@@ -1,0 +1,27 @@
+.project-detail {
+    padding-bottom: 32px;
+
+    img {
+        max-width: 50%;
+    }
+
+    p {
+        font-size: 24px;
+        margin-top: 64px;
+        margin-bottom: 0;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 64px;
+        color: var(--text-color);
+        transition: .5s ease all;
+    }
+
+    @media (max-width: 480px) {
+        img {
+            max-width: 100%;
+        }
+    }
+}

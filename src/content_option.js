@@ -79,46 +79,42 @@ const services = [
 
 const dataportfolio = [
     {
+        id: "lets-merge",
+        img: new URL('./assets/images/LetsMerge.jpg', import.meta.url).href,
+        title: "렛츠머지",
+        description: "렛츠머지는 같은 방향으로 이동하는 사람들을 실시간으로 매칭해 합리적인 비용으로 편리한 이동을 돕는 택시팟 플랫폼입니다. 실시간 위치 공유, 안전한 매칭 시스템, 자동 정산 기능을 통해 효율적이고 스마트한 이동 경험을 제공합니다.",
+    },
+    {
+        id: "challenge-one",
         img: new URL('./assets/images/ChallengeOne.jpg', import.meta.url).href,
-        description: "Challenge One",
-        link: "https://github.com/joonseo1227/challengeone",
+        title: "Challenge One",
+        description: "Challenge One은 사용자들이 목표를 설정하고 이를 효과적으로 달성할 수 있도록 돕는 플랫폼입니다. Firebase를 기반으로 하여 안정적인 데이터 관리와 인증 서비스를 제공하며, 사용자 친화적인 UI/UX 디자인으로 목표 설정 및 관리 경험을 최적화했습니다.",
+        github: "https://github.com/joonseo1227/challengeone",
     },
     {
+        id: "autonomous-driving-garbage-collector",
         img: new URL('./assets/images/AutonomousDrivingGarbageCollector.jpg', import.meta.url).href,
-        description: "Autonomous Driving Garbage Collector",
-        link: "https://github.com/joonseo1227/robo_can",
+        title: "Autonomous Driving Garbage Collector",
+        description: "이 앱은 사용자가 자율 주행 쓰레기통 로봇의 상태를 모니터링하고 제어할 수 있도록 합니다. 음성 명령과 블루투스 통신을 통해 로봇과 직관적으로 상호작용할 수 있습니다.",
+        github: "https://github.com/joonseo1227/robo_can",
     },
     {
+        id: "meta-gachon",
         img: new URL('./assets/images/MetaGachon.jpg', import.meta.url).href,
-        description: "Meta Gachon",
-        link: "",
+        title: "Meta Gachon",
+        description: "Meta Gachon은 가천대학교 AI·소프트웨어학부 구성원을 위한 예약 플랫폼입니다. 강의실, 회의실, GPU 컴퓨터를 쉽고 편리하게 예약할 수 있습니다.",
     },
     {
-        img: new URL('../public/thumbnail.jpg', import.meta.url).href,
-        description: "",
-        link: "",
-    },
-    {
+        id: "film-choice",
         img: new URL('./assets/images/FilmChoice.jpg', import.meta.url).href,
-        description: "FilmChoice",
-        link: "https://github.com/joonseo1227/filmchoice",
-    },
-    {
-        img: new URL('../public/thumbnail.jpg', import.meta.url).href,
-        description: "",
-        link: "",
-    },
+        title: "FilmChoice",
+        description: "FlimChoice는 사용자가 영화를 검색하고 다양한 정보를 확인할 수 있는 영화 정보 웹사이트입니다.",
+        github: "https://github.com/joonseo1227/filmchoice",
+    }
 ];
 
 const contactConfig = {
     YOUR_EMAIL: "joonseo1227@gmail.com",
-    //YOUR_FONE: "",
-    // description: "",
-    // creat an emailjs.com account
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
 };
 
 const socialprofils = {

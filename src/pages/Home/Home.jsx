@@ -15,7 +15,7 @@ export const Home = () => {
                 </Helmet>
                 <div className="intro_sec d-block d-lg-flex align-items-center ">
                     <div
-                        className="h_bg-image order-1 order-lg-2 h-100 "
+                        className="h_bg-image order-1 order-lg-2 h-100"
                         style={{backgroundImage: `url(${introdata.your_img_url})`}}
                     ></div>
                     <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
@@ -35,7 +35,7 @@ export const Home = () => {
                                         }}
                                     />
                                 </h1>
-                                <p className="mb-1x text-start">{introdata.description}</p>
+                                <p>{introdata.description}</p>
                                 <div className=" text-start">
                                     <Link to="/portfolio" className="text_2">
                                         <div id="button_p" className="ac_btn btn ">
@@ -45,7 +45,7 @@ export const Home = () => {
                                             <div className="ring three"></div>
                                         </div>
                                     </Link>
-                                    <Link to="/contact">
+                                    <Link to="/contact" className="text_2">
                                         <div id="button_h" className="ac_btn btn">
                                             Contact Me
                                             <div className="ring one"></div>

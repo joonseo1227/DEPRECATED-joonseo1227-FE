@@ -17,17 +17,17 @@ export const About = () => {
 
                 <Row className="sec_sp">
                     <Col lg="5">
-                        <h3 className="py-4">{dataabout.title}</h3>
+                        <h3 className="subtitle-text">{dataabout.title}</h3>
                     </Col>
                     <Col lg="7" className="d-flex align-items-center">
                         <div>
-                            <p>{dataabout.aboutme}</p>
+                            <p className="aboutme-text">{dataabout.aboutme}</p>
                         </div>
                     </Col>
                 </Row>
-                <Row className=" sec_sp">
+                <Row className="sec_sp">
                     <Col lg="5">
-                        <h3 className="py-4">Work Timeline</h3>
+                        <h3 className="subtitle-text">Work Timeline</h3>
                     </Col>
                     <Col lg="7">
                         <table className="table caption-top">
@@ -36,7 +36,6 @@ export const About = () => {
                                 return (
                                     <tr key={i}>
                                         <th scope="row">{data.jobtitle}</th>
-                                        <td>{data.where}</td>
                                         <td>{data.date}</td>
                                     </tr>
                                 );
@@ -47,7 +46,7 @@ export const About = () => {
                 </Row>
                 <Row className="sec_sp">
                     <Col lg="5">
-                        <h3 className="py-4">Skills</h3>
+                        <h3 className="subtitle-text">Skills</h3>
                     </Col>
                     <Col lg="7">
                         {skills.map((data, i) => {
@@ -71,12 +70,12 @@ export const About = () => {
                 </Row>
                 <Row className="sec_sp">
                     <Col lang="5">
-                        <h3 className="py-4">Services</h3>
+                        <h3 className="subtitle-text">Services</h3>
                     </Col>
                     <Col lg="7">
                         {services.map((data, i) => {
                             return (
-                                <div className="service_ py-4" key={i}>
+                                <div className="service" key={i}>
                                     <h5 className="service__title">{data.title}</h5>
                                     <p className="service_desc">{data.description}</p>
                                 </div>

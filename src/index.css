@@ -103,6 +103,12 @@ p {
     margin-top: 160px;
     margin-bottom: 64px;
     font-size: 64px;
+    overflow: hidden;
+}
+
+.subtitle-text {
+    margin-bottom: 32px;
+    font-size: 32px;
 }
 
 .text_2,

@@ -9,27 +9,32 @@ const ProjectDetail = () => {
     const project = dataportfolio.find((p) => p.id === projectId);
 
     if (!project) {
-        return (
-            <Container className="project-detail">
-                <h1 className="title-text">존재하지 않는 프로젝트입니다.</h1>
-            </Container>
-        );
+        return (<Container className="project-detail">
+            <h1 className="title-text">존재하지 않는 프로젝트입니다.</h1>
+        </Container>);
     }
 
-    return (
-        <Container className="project-detail">
+    return (<Container className="project-detail">
 
-            <h1 className="title-text">{project.title}</h1>
+        <h1 className="title-text">{project.title}</h1>
 
+        <div className="project-info">
             <img src={project.img} alt={project.title}/>
-            <p>{project.description}</p>
-            {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <LogoGithub className="icon"/>
-                </a>
-            )}
-        </Container>
-    );
+
+            <div>
+                <p className="job-text">{project.job}</p>
+                <p className="period-text">{project.period}</p>
+                <p className="tech-text">{project.tech}</p>
+            </div>
+        </div>
+
+        <p className="description-text">{project.description}</p>
+
+        {project.github && (<a href={project.github} target="_blank" rel="noopener noreferrer">
+            <LogoGithub className="icon"/>
+        </a>)}
+
+    </Container>);
 };
 
 export default ProjectDetail;

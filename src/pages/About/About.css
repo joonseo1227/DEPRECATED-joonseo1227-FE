@@ -1,5 +1,9 @@
 .sec_sp {
-    margin-bottom: calc(3rem + 5.128vw);
+    margin-bottom: 64px;
+}
+
+.aboutme-text {
+    font-size: 20px;
 }
 
 .table td,
@@ -64,19 +68,13 @@
     }
 }
 
-.section-title {
-    font-size: 48px;
-}
-
 .service__title {
-    padding: 8px 0;
-    border-bottom: solid 1px var(--text-color);
+    margin-bottom: 8px;
 }
 
-.service-section .service-category-title {
-    padding-bottom: 4px;
+.service_desc {
+    margin-bottom: 32px;
 }
-
 
 /*! CSS Used keyframes */
 

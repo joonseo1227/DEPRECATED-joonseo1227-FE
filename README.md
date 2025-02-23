@@ -10,15 +10,15 @@ https://joonseo1227.com
 <br>
 
 ## 💻 PC 스크린샷
-<img src="https://github.com/user-attachments/assets/9494f9d1-2fb9-4c25-965c-131b26227b07" width="100%"/>
-<img src="https://github.com/user-attachments/assets/afa51c2d-f3c8-4aeb-b5c1-47cbf3be74af" width="100%"/>
+<img src="https://github.com/user-attachments/assets/a8558d86-6404-466f-9656-ad62b2ada9e6" width="100%"/>
+<img src="https://github.com/user-attachments/assets/90bfb2a9-ab60-41cd-8b1a-40fab46819b8" width="100%"/>
 
 <br>
 
 ## 📱 모바일 스크린샷
 
-<img src="https://github.com/user-attachments/assets/8ac73e1f-3204-43ad-b357-8a71ee5792b6" width="40%"/>
-<img src="https://github.com/user-attachments/assets/6eda0f3b-c93c-4a36-93ff-02742dde67d0" width="40%"/>
+<img src="https://github.com/user-attachments/assets/f844f263-d7f0-48f6-978b-4eec776263e3" width="40%"/>
+<img src="https://github.com/user-attachments/assets/4768169e-5b92-45f1-bc80-a6a4434df38e" width="40%"/>
 
 <br>
 

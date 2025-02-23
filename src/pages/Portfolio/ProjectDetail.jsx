@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom";
 import {dataportfolio} from "../../content_option";
 import "./ProjectDetail.css";
 import {Container} from "react-bootstrap";
-import LogoGithub from "@carbon/icons-react/es/LogoGithub.js";
+import {LogoGithub} from "@carbon/icons-react";
 
 const ProjectDetail = () => {
     const {projectId} = useParams();

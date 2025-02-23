@@ -20,12 +20,16 @@ const Headermain = () => {
                     <Link className="navbar-brand nav_ac" to="/">
                         {logotext}
                     </Link>
+
+                    <div className="navbar-bg"></div>
+
                     <div className="d-flex align-items-center">
                         <Themetoggle/>
                         <button className="nav_ac" onClick={handleToggle}>
                             {!isActive ? <CloseLarge size="24"/> : <Menu size="24"/>}
                         </button>
                     </div>
+
                 </div>
 
                 <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>

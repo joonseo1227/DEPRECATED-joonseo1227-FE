@@ -95,6 +95,14 @@
     transition: .5s ease all;
 }
 
+.navbar-bg {
+    height: 62px;
+    width: 100vh;
+    background-color: var(--bg-color);
+    transition: .5s ease all;
+    z-index: 999;
+}
+
 @media (min-width: 800px) {
     .the_menu .menu_item > a {
         font-size: 5vw;
@@ -103,5 +111,9 @@
     .the_menu {
         padding-top: 10vh;
         padding-bottom: 10vh;
+    }
+
+    .navbar-bg {
+        background-color: transparent;
     }
 }

@@ -46,8 +46,7 @@
 }
 
 .the_menu {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    padding-top: 10vh;
     padding-left: 0;
     transition: .5s ease all;
 }
@@ -61,7 +60,7 @@
 .the_menu .menu_item > a {
     color: var(--text-color);
     line-height: 1;
-    font-size: 15vw;
+    font-size: 5vw;
     display: inline-block;
     position: relative;
     transition: color 250ms cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -98,22 +97,17 @@
 .navbar-bg {
     height: 62px;
     width: 100vh;
-    background-color: var(--bg-color);
+    background-color: transparent;
     transition: .5s ease all;
     z-index: 999;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
     .the_menu .menu_item > a {
-        font-size: 5vw;
-    }
-
-    .the_menu {
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        font-size: 15vw;
     }
 
     .navbar-bg {
-        background-color: transparent;
+        background-color: var(--bg-color);
     }
 }

@@ -1,7 +1,7 @@
 import "./Home.css";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import {introdata, meta} from "../../content_option";
+import {intro, meta} from "../../content_option";
 import {Link} from "react-router-dom";
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
                 <div className="intro_sec d-block d-lg-flex align-items-center ">
                     <div
                         className="h_bg-image order-1 order-lg-2 h-100"
-                        style={{backgroundImage: `url(${introdata.your_img_url})`}}
+                        style={{backgroundImage: `url(${intro.your_img_url})`}}
                     ></div>
                     <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
                         <div className="align-self-center ">
@@ -25,9 +25,9 @@ export const Home = () => {
                                     <Typewriter
                                         options={{
                                             strings: [
-                                                introdata.animated.first,
-                                                introdata.animated.second,
-                                                introdata.animated.third,
+                                                intro.animated.first,
+                                                intro.animated.second,
+                                                intro.animated.third,
                                             ],
                                             autoStart: true,
                                             loop: true,
@@ -35,7 +35,7 @@ export const Home = () => {
                                         }}
                                     />
                                 </h1>
-                                <p>{introdata.description}</p>
+                                <p>{intro.description}</p>
                                 <div className=" text-start">
                                     <Link to="/portfolio" className="text_2">
                                         <div id="button_p" className="ac_btn btn ">

@@ -1,40 +1,95 @@
 import {useParams} from "react-router-dom";
-import {dataportfolio} from "../../content_option";
+import {useEffect, useState} from "react";
+import supabase from "/src/utils/supabase.js";
+import {meta} from "../../content_option";
 import "./ProjectDetail.css";
 import {Container} from "react-bootstrap";
 import {LogoGithub} from "@carbon/icons-react";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 
 const ProjectDetail = () => {
     const {projectId} = useParams();
-    const project = dataportfolio.find((p) => p.id === projectId);
+    const [project, setProject] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    if (!project) {
-        return (<Container className="project-detail">
-            <h1 className="title-text">존재하지 않는 프로젝트입니다.</h1>
-        </Container>);
+    useEffect(() => {
+        const fetchProject = async () => {
+            try {
+                const {data, error} = await supabase
+                    .from('project')
+                    .select('*')
+                    .eq('id', projectId)
+                    .single();
+
+                if (error) {
+                    console.error('Supabase 에러:', error);
+                    setError(error.message);
+                    return;
+                }
+
+                setProject(data);
+            } catch (err) {
+                console.error('예외 발생:', err);
+                setError(err.message);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchProject();
+    }, [projectId]);
+
+    if (isLoading) {
+        return (
+            <Container className="project-detail">
+                <p>로딩 중...</p>
+            </Container>
+        );
     }
 
-    return (<Container className="project-detail">
+    if (error || !project) {
+        return (
+            <Container className="project-detail">
+                <h1 className="title-text">존재하지 않는 프로젝트입니다.</h1>
+            </Container>
+        );
+    }
 
-        <h1 className="title-text">{project.title}</h1>
+    return (
+        <HelmetProvider>
+            <Container className="project-detail">
+                <Helmet>
+                    <meta charSet="utf-8"/>
+                    <title> {project.title} | {meta.title} </title>
+                    <meta name="description" content={meta.description}/>
+                </Helmet>
 
-        <div className="project-info">
-            <img src={project.img} alt={project.title}/>
+                <h1 className="title-text">{project.title}</h1>
 
-            <div>
-                <p className="job-text">{project.job}</p>
-                <p className="period-text">{project.period}</p>
-                <p className="tech-text">{project.tech}</p>
-            </div>
-        </div>
+                <div className="project-info">
+                    <img src={project.img_url} alt={project.title}/>
 
-        <p className="description-text">{project.description}</p>
+                    <div>
+                        <p className="job-text">{project.job}</p>
+                        <p className="period-text">
+                            {new Date(project.start_date).toLocaleDateString()} -
+                            {project.end_date ? new Date(project.end_date).toLocaleDateString() : '진행중'}
+                        </p>
+                        <p className="tech-text">{project.tech}</p>
+                    </div>
+                </div>
 
-        {project.github && (<a href={project.github} target="_blank" rel="noopener noreferrer">
-            <LogoGithub className="icon"/>
-        </a>)}
+                <p className="description-text">{project.description}</p>
 
-    </Container>);
+                {project.github_url && (
+                    <a href={project.github_url} target="_blank" rel="noopener noreferrer">
+                        <LogoGithub className="icon"/>
+                    </a>
+                )}
+            </Container>
+        </HelmetProvider>
+    );
 };
 
 export default ProjectDetail;

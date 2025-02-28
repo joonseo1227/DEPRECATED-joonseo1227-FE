@@ -96,13 +96,13 @@
 
 .navbar-bg {
     height: 62px;
-    width: 100vh;
+    width: 100vw;
     background-color: transparent;
     transition: .5s ease all;
     z-index: 999;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .the_menu .menu_item > a {
         font-size: 15vw;
     }

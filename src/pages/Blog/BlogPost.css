@@ -1,0 +1,71 @@
+.blog-post {
+    margin: 0 auto;
+
+    /* 포스트 헤더 스타일 */
+
+    .post-header {
+        position: relative;
+        padding: 48px;
+        margin-bottom: 32px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    /* 배경 오버레이 효과 */
+
+    .post-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    /* 헤더 내부 내용은 오버레이 위에 표시 */
+
+    .post-header > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* 제목 텍스트 스타일 */
+
+    .title-text {
+        font-size: 48px;
+        margin-bottom: 8px;
+    }
+
+    /* 날짜 텍스트 스타일 */
+
+    .post-date {
+        margin: 0;
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    /* 본문 내용 스타일 */
+
+    .post-content {
+        font-size: 18px;
+        line-height: 1.8;
+        color: var(--text-color);
+    }
+
+    /* 반응형 디자인 - 화면 폭이 작을 때 */
+    @media (max-width: 1200px) {
+        .post-header {
+            padding: 16px 62px 16px 16px;
+
+        }
+
+        .title-text {
+            font-size: 32px;
+        }
+    }
+}

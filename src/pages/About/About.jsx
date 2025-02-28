@@ -1,12 +1,12 @@
 import "./About.css";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import {Col, Container, Row} from "react-bootstrap";
-import {dataabout, meta, services, skills, worktimeline,} from "../../content_option";
+import {about, meta, services, skills, worktimeline,} from "../../content_option";
 
 export const About = () => {
     return (
         <HelmetProvider>
-            <Container className="About-header">
+            <Container>
                 <Helmet>
                     <meta charSet="utf-8"/>
                     <title> About | {meta.title}</title>
@@ -17,11 +17,11 @@ export const About = () => {
 
                 <Row className="sec_sp">
                     <Col lg="5">
-                        <h3 className="subtitle-text">{dataabout.title}</h3>
+                        <h3 className="subtitle-text">{about.title}</h3>
                     </Col>
                     <Col lg="7" className="d-flex align-items-center">
                         <div>
-                            <p className="aboutme-text">{dataabout.aboutme}</p>
+                            <p className="aboutme-text">{about.aboutme}</p>
                         </div>
                     </Col>
                 </Row>

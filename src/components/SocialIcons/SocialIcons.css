@@ -58,7 +58,7 @@
     background-color: var(--text-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .stick_follow_icon {
         width: unset;
         height: unset;

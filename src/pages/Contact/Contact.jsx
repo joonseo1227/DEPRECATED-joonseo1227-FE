@@ -1,6 +1,6 @@
 import "./Contact.css";
 import {Helmet, HelmetProvider} from "react-helmet-async";
-import {contactConfig, meta} from "../../content_option";
+import {contact, meta} from "../../content_option";
 import {Container} from "react-bootstrap";
 
 export const ContactUs = () => {
@@ -16,7 +16,7 @@ export const ContactUs = () => {
 
                 <h1 className="title-text">Contact</h1>
 
-                <p className="email-text">{contactConfig.YOUR_EMAIL}</p>
+                <p className="email-text">{contact.YOUR_EMAIL}</p>
 
 
             </Container>

@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Asleep, Sun} from '@carbon/icons-react';
 
-const Themetoggle = () => {
+const ThemeToggle = () => {
     const [theme, settheme] = useState(localStorage.getItem("theme") || "dark");
     const themetoggle = () => {
         settheme(theme === "dark" ? "light" : "dark");
@@ -18,4 +18,4 @@ const Themetoggle = () => {
 };
 
 
-export default Themetoggle;
+export default ThemeToggle;

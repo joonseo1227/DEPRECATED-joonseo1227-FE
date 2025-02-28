@@ -38,7 +38,7 @@
     --primary-color: #0f62fe;
     --secondary-color: #4589ff;
     --text-color: #ffffff;
-    --text-color-2: #c6c6c6;
+    --text-color-2: #a8a8a8;
     --text-color-3: #6f6f6f;
     --overlay-color: rgb(12 12 12 / 63%);
 }
@@ -48,7 +48,7 @@
     --primary-color: #0f62fe;
     --secondary-color: #4589ff;
     --text-color: #000000;
-    --text-color-2: #393939;
+    --text-color-2: #525252;
     --text-color-3: #8d8d8d;
     --overlay-color: rgb(255 255 255 / 70%);
 }
@@ -100,7 +100,7 @@ p {
 }
 
 .title-text {
-    margin-top: 160px;
+    margin-top: 10vh;
     margin-bottom: 64px;
     font-size: 64px;
     overflow: hidden;
@@ -126,4 +126,11 @@ code {
 
 .color_sec {
     color: var(--secondary-color);
+}
+
+
+@media (max-width: 1200px) {
+    body {
+        padding-top: 62px;
+    }
 }

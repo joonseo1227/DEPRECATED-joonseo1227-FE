@@ -3,8 +3,10 @@ import {useEffect, useState} from 'react';
 import "./BlogPost.css";
 import {meta} from "../../content_option.js";
 import {Helmet, HelmetProvider} from "react-helmet-async";
-import {Container} from "react-bootstrap";
 import supabase from "/src/utils/supabase.js";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 function BlogPost() {
     const {postId} = useParams();
@@ -48,23 +50,23 @@ function BlogPost() {
 
     if (isLoading) {
         return (
-            <Container className="blog-post">
+            <div className="blog-post">
                 <p>로딩 중...</p>
-            </Container>
+            </div>
         );
     }
 
     if (error || !post) {
         return (
-            <Container className="blog-post">
+            <div className="blog-post">
                 <h1 className="title-text">존재하지 않는 포스트입니다.</h1>
-            </Container>
+            </div>
         );
     }
 
     return (
         <HelmetProvider>
-            <Container className="blog-post">
+            <div className="blog-post">
                 <Helmet>
                     <meta charSet="utf-8"/>
                     <title> {post.title} | {meta.title} </title>
@@ -88,9 +90,15 @@ function BlogPost() {
                 </div>
 
                 <div className="post-content">
-                    {post.content || "내용이 없습니다."}
+                    <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw]}
+                    >
+                        {post.content || "내용이 없습니다."}
+                    </ReactMarkdown>
+
                 </div>
-            </Container>
+            </div>
         </HelmetProvider>
     );
 }

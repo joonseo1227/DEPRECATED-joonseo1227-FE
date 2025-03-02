@@ -1,17 +1,18 @@
 .blog-post {
-    margin: 0 auto;
 
     /* 포스트 헤더 스타일 */
 
     .post-header {
         position: relative;
         padding: 48px;
-        margin-bottom: 32px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         color: #fff;
         overflow: hidden;
+        margin: 0 auto 64px auto;
+        max-width: 800px;
+        word-break: keep-all;
     }
 
     /* 배경 오버레이 효과 */
@@ -55,17 +56,85 @@
         font-size: 18px;
         line-height: 1.8;
         color: var(--text-color);
+        max-width: 800px;
+        margin: 0 auto 32px auto;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 32px 0 0 0;
+            word-break: keep-all;
+        }
+
+        p {
+            margin: 16px 0 0 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 16px 0 0 0;
+        }
+
+        pre {
+            background-color: var(--bg-color-2);
+            padding: 16px;
+            overflow-x: auto;
+            margin: 16px 0 0 0;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--text-color);
+            padding: 16px;
+            color: var(--text-color);
+            background-color: var(--bg-color-2);
+            margin: 16px 0 0 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: var(--bg-color-2);
+            margin: 16px 0 0 0;
+        }
+
+        th, td {
+            border: 1px solid var(--text-color-4);
+            padding: 8px;
+        }
+
+        ul, ol {
+            margin: 16px 0 0 0;
+            padding: 0;
+            list-style: inside decimal;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
     }
 
     /* 반응형 디자인 - 화면 폭이 작을 때 */
     @media (max-width: 1200px) {
+
         .post-header {
             padding: 16px 62px 16px 16px;
-
         }
 
         .title-text {
             font-size: 32px;
+        }
+
+        .post-content {
+            padding: 0 16px;
         }
     }
 }

@@ -110,11 +110,24 @@
             padding: 8px;
         }
 
-        ul, ol {
-            margin: 16px 0 0 0;
-            padding: 0;
-            list-style: inside decimal;
+        ol {
+            margin: 8px 0 0 0;
+            padding-left: 1.5em;
+            counter-reset: item;
+            list-style-type: decimal;
         }
+
+        ul {
+            margin: 8px 0 0 0;
+            padding-left: 1.5em;
+            list-style-type: disc;
+        }
+
+        li > ul,
+        li > ol {
+            margin: 0;
+        }
+
 
         a {
             color: var(--text-color);

@@ -59,31 +59,35 @@
         max-width: 800px;
         margin: 0 auto 32px auto;
 
+        h1 {
+            margin: 80px 0 0 0;
+        }
+
+        h2, h3 {
+            margin: 32px 0 0 0;
+        }
+
         h1,
         h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 32px 0 0 0;
+        h3 {
             word-break: keep-all;
         }
 
-        p {
-            margin: 16px 0 0 0;
+        p, ol, ul {
+            margin: 24px 0 0 0;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            margin: 16px 0 0 0;
+            margin: 32px 0 0 0;
         }
 
         pre {
             background-color: var(--bg-color-2);
             padding: 16px;
             overflow-x: auto;
-            margin: 16px 0 0 0;
+            margin: 32px 0 0 0;
         }
 
         blockquote {
@@ -91,7 +95,7 @@
             padding: 16px;
             color: var(--text-color);
             background-color: var(--bg-color-2);
-            margin: 16px 0 0 0;
+            margin: 32px 0 0 0;
 
             p {
                 margin: 0;
@@ -102,7 +106,7 @@
             border-collapse: collapse;
             width: 100%;
             background-color: var(--bg-color-2);
-            margin: 16px 0 0 0;
+            margin: 32px 0 0 0;
         }
 
         th, td {
@@ -111,14 +115,12 @@
         }
 
         ol {
-            margin: 8px 0 0 0;
             padding-left: 1.5em;
             counter-reset: item;
             list-style-type: decimal;
         }
 
         ul {
-            margin: 8px 0 0 0;
             padding-left: 1.5em;
             list-style-type: disc;
         }

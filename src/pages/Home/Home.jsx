@@ -10,8 +10,13 @@ export const Home = () => {
             <section id="home" className="home">
                 <Helmet>
                     <meta charSet="utf-8"/>
-                    <title> {meta.title}</title>
+                    <title>{meta.title}</title>
                     <meta name="description" content={meta.description}/>
+                    <meta property="og:site_name" content={meta.title}/>
+                    <meta property="og:title" content={meta.title}/>
+                    <meta property="og:image"
+                          content="https://avtqiifssheaiyrcujbi.supabase.co/storage/v1/object/sign/images/thumbnail.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvdGh1bWJuYWlsLmpwZyIsImlhdCI6MTc0MDkyOTc3MywiZXhwIjozMzI0NTM5Mzc3M30.Zg43Io1d1YbvvOZ42m3CQKbwhPT-u62Bz8T_yYsqDus"/>
+                    <meta property="og:description" content={meta.description}/>
                 </Helmet>
                 <div className="intro_sec d-block d-lg-flex align-items-center ">
                     <div

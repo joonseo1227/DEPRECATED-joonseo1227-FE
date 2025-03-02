@@ -63,6 +63,10 @@ const ProjectDetail = () => {
                     <meta charSet="utf-8"/>
                     <title> {project.title} | {meta.title} </title>
                     <meta name="description" content={meta.description}/>
+                    <meta property="og:site_name" content="joonseo1227"/>
+                    <meta property="og:title" content={`${project.title} | ${meta.title}`}/>
+                    <meta property="og:image" content={project.img_url}/>
+                    <meta property="og:description" content={project.description}/>
                 </Helmet>
 
                 <h1 className="title-text">{project.title}</h1>

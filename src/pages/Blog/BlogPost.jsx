@@ -69,8 +69,13 @@ function BlogPost() {
             <div className="blog-post">
                 <Helmet>
                     <meta charSet="utf-8"/>
-                    <title> {post.title} | {meta.title} </title>
+                    <title>{post.title} | {meta.title}</title>
                     <meta name="description" content={post.summary || meta.description}/>
+                    <meta property="og:site_name" content="joonseo1227"/>
+                    <meta property="og:title" content={`${post.title} | ${meta.title}`}/>
+                    <meta property="og:image" content={post.thumbnail_url}/>
+                    <meta property="og:description" content={post.summary}/>
+                    <meta property="og:type" content="blog"/>
                 </Helmet>
 
                 <div
